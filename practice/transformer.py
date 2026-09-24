@@ -90,7 +90,6 @@ class Attention(nn.Module):
 class MLP(nn.Module):
     def __init__(self, dims: list | tuple):
         super().__init__()
-        
         self.layers = nn.ModuleList()
         for i in range(len(dims) - 1):
             self.layers.append(nn.Linear(dims[i], dims[i+1]))
